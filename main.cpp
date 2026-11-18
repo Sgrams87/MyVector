@@ -56,5 +56,47 @@ int main() {
         cout << names.at(i) << endl;
     }
 
+    cout << "\nTesting pop back...\n";
+    
+    names.pop_back();
+
+    for (size_t i = 0; i < names.size(); i++) {
+        cout << names.at(i) << endl;
+    }
+    cout << "\nChecking if empty...\n";
+    
+    if (names.empty()) {
+	cout << "The vector is empty\n" << endl;
+    }
+    else {
+	cout << "The vector is not empty" << endl;
+    }
+    
+    cout << "Size before clear: " << names.size() << endl;
+    cout << "Capacity before clear: " << names.capacity() << endl;
+
+    cout << "\nClearing names...\n";
+
+
+    names.clear();
+
+    for (size_t i = 0; i < names.size(); i++) {
+        cout << names.at(i) << endl;
+    }
+
+    cout << "Size after clear: " << names.size() << endl;
+    cout << "Capacity after clear: " << names.capacity() << endl;
+
+    cout << "\nChecking if empty again...\n";
+    
+    if (names.empty()) {
+        cout << "The vector is empty\n" << endl;
+    }
+    else {
+        cout << "The vector is not empty" << endl;
+    }
+
+
+
     return 0;
 }

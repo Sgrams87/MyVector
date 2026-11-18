@@ -14,7 +14,7 @@ private:
 public:
 	MyVector(){ // constructor, by default no memory allocated
 		elem = nullptr;
-		array_size =0;
+		array_size = 0;
 		space = 0;
 	}
 
@@ -73,6 +73,23 @@ public:
 		array_size++;
 	}
 
+	bool empty()const
+	{
+		return array_size == 0;
+	}
+
+	void clear()
+	{
+		array_size = 0;
+	}
+
+	void pop_back()
+	{
+		if (array_size != 0)
+		{
+			array_size --;
+		}
+	}
 	T& at(std::size_t index){
 		if (index >= array_size){
 			throw std::out_of_range("Index out of range!");
